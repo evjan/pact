@@ -19,7 +19,7 @@ module Pact
         'GET'
       end
 
-      def respond env
+      def respond
         number_of_missing_interactions = @interaction_list.missing_interactions.size
         logger.info "Number of missing interactions for mock \"#{name}\" = #{number_of_missing_interactions}"
         [200, {}, ["#{number_of_missing_interactions}"]]

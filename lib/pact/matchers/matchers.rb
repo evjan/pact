@@ -20,7 +20,7 @@ module Pact
       when Hash then hash_diff(expected, actual, options)
       when Array then array_diff(expected, actual, options)
       when Pact::Term then diff(expected.matcher, actual, options)
-      when Regexp then regexp_diff(expected, actual, options)
+      when Regexp then regexp_diff(expected, actual)
       when Pact::SomethingLike then diff(expected.contents, actual, options.merge(:structure => true))
       else object_diff(expected, actual, options)
       end
@@ -30,7 +30,7 @@ module Pact
       diff expected, actual, {structure: true}
     end
 
-    def regexp_diff regexp, actual, options
+    def regexp_diff regexp, actual
       if actual != nil && regexp.match(actual)
         {}
       else

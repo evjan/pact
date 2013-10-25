@@ -43,7 +43,7 @@ module Pact
       @provider = attributes[:provider]
     end
 
-    def as_json(options = {})
+    def as_json
       {
         provider: @provider.as_json,
         consumer: @consumer.as_json,

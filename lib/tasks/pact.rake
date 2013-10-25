@@ -18,7 +18,7 @@ namespace :pact do
   end
 
   desc "Verifies the pact at the given URI against this service provider."
-  task 'verify:at', :pact_uri do | t, args |
+  task 'verify:at', :pact_uri do | _, args |
     require 'pact/provider'
     require 'pact/tasks/task_helper'
 

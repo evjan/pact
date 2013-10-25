@@ -15,7 +15,7 @@ module Pact
 
       def initialize(attributes)
         @interaction_builder = nil
-        @mock_service_client = MockServiceClient.new(attributes[:provider_name], attributes[:port])
+        @mock_service_client = MockServiceClient.new(attributes[:port])
         @consumer_contract = Pact::ConsumerContract.new(
           :consumer => ServiceConsumer.new(name: attributes[:consumer_name]),
           :provider => ServiceProvider.new(name: attributes[:provider_name])

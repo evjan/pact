@@ -8,10 +8,10 @@ module Pact::Consumer
       let(:expected_interaction) { InteractionFactory.create }
       let(:unexpected_request) { RequestFactory.create_actual }
       subject {
-        interactionList = InteractionList.new
-        interactionList.add expected_interaction
-        interactionList.register_unexpected_request unexpected_request
-        interactionList
+        interaction_list = InteractionList.new
+        interaction_list.add expected_interaction
+        interaction_list.register_unexpected_request unexpected_request
+        interaction_list
        }
     end
 
@@ -19,10 +19,10 @@ module Pact::Consumer
       let(:expected_interaction) { InteractionFactory.create }
       let(:unexpected_request) { RequestFactory.create_actual }
       subject {
-        interactionList = InteractionList.new
-        interactionList.add expected_interaction
-        interactionList.register_matched expected_interaction
-        interactionList
+        interaction_list = InteractionList.new
+        interaction_list.add expected_interaction
+        interaction_list.register_matched expected_interaction
+        interaction_list
        }
     end
 

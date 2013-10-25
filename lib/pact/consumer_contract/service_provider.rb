@@ -13,7 +13,7 @@ module Pact
       name
     end
 
-    def as_json options = {}
+    def as_json
       {name: name}
     end
 

@@ -9,7 +9,7 @@ module Pact
       '<index not to exist>'
     end
 
-    def to_json opts = {}
+    def to_json
       to_s
     end
 

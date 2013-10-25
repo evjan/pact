@@ -27,11 +27,11 @@ module Pact
       end
 
       def self.provider_states
-        @@provider_states ||= {}
+        @provider_states ||= {}
       end
 
       def self.current_namespaces
-        @@current_namespaces ||= []
+        @current_namespaces ||= []
       end
 
       def self.get name, options = {}

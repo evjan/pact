@@ -32,7 +32,7 @@ module Pact
 
 
     def create_instance_method_from_block &block
-      meth = self.class.class_eval do
+      self.class.class_eval do
         define_method :block_as_instance_method_, &block
         meth = instance_method :block_as_instance_method_
         remove_method :block_as_instance_method_

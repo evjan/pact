@@ -8,7 +8,7 @@ module Pact
       "<index not found>"
     end
 
-    def to_json options = {}
+    def to_json
       to_s
     end
 

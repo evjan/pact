@@ -10,7 +10,7 @@ module Pact
       '<key not to exist>'
     end
 
-    def to_json opts = {}
+    def to_json
       to_s
     end
   end

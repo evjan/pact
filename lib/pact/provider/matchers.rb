@@ -16,7 +16,7 @@ RSpec::Matchers.define :match_term do |expected|
     end
   end
 
-  failure_message_for_should do | actual |
+  failure_message_for_should do
     @message.ai
   end
 

@@ -7,8 +7,8 @@ module Pact
 
     let(:raw_request) do
       {
-        'method' => 'get',
-        'path' => '/mallory'
+        :method => 'get',
+        :path => '/mallory'
       }
     end
 

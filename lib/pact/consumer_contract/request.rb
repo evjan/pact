@@ -36,10 +36,10 @@ module Pact
 
       def difference(actual_request)
         request_diff = diff(as_json_without_body, actual_request.as_json_without_body)
-        unless body.is_a? NullExpectation
-          request_diff.merge(body_difference(actual_request.body))
-        else
+        if body.is_a? NullExpectation
           request_diff
+        else
+          request_diff.merge(body_difference(actual_request.body))
         end
       end
 

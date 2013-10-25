@@ -6,7 +6,7 @@ module Pact
 
       MOCK_SERVICE_ADMINISTRATON_HEADERS = {'X-Pact-Mock-Service' => 'true'}
 
-      def initialize name, port
+      def initialize port
         @http = Net::HTTP.new('localhost', port)
       end
 

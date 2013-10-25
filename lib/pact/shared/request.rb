@@ -61,7 +61,7 @@ module Pact
 
       def as_json_without_body
         keep_keys = [:method, :path, :headers, :query]
-        as_json.reject{ |key, value| !keep_keys.include? key }
+        as_json.reject{ |key, _| !keep_keys.include? key }
       end
     end
   end
